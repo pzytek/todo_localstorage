@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>TODO with LocalStorage</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="container__header">TODO list</h1>
+      <div class="add-container">
+        <h2 class="add-container__header">Add new element to list:</h2>
+        <input
+          type="text"
+          placeholder="Write what you have to do here..."
+          class="add-container__input"
+        />
+        <button class="add-container__button">Add</button>
+      </div>
+      <div class="item-container">
+        <h2 class="item-container__header">Items to do:</h2>
+        <ul class="item-list"></ul>
+      </div>
+    </div>
+  </body>
+</html>
