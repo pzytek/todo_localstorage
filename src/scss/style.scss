@@ -1,0 +1,249 @@
+//variables
+$button-color: #6200ea;
+$button-color-hover: #5215a7;
+$trash-color: #a11d1d;
+$borders-radius: 3px;
+$trans-set: transform 1s ease;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* Set font to 1rem = 10px */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  // background: linear-gradient(to bottom left, #7f3cdd, #b597ea);
+  background: linear-gradient(to bottom left, #5b1ab6, #311b2a);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.container {
+  height: 90vh;
+  width: 90vw;
+  background-color: #ecf2f9;
+  border-radius: $borders-radius;
+  overflow: auto;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.header__span {
+  margin-left: 10px;
+}
+
+.header__mode-icon {
+  margin: 0 20px 0 auto;
+  transition: $trans-set;
+  transform: rotate(45deg);
+  &:hover {
+    transition: $trans-set;
+    transform: rotate(135deg);
+  }
+  &--clicked {
+    filter: invert(100%);
+    transition: $trans-set;
+    transform: rotate(225deg);
+  }
+  &--hidden {
+    margin-right: auto;
+    visibility: hidden;
+  }
+}
+
+.add-container {
+  background-color: none;
+  height: 70px;
+  margin: 0 10px 30px;
+  border-radius: $borders-radius;
+  position: sticky;
+  top: 0;
+
+  &__input {
+    border: 1px black;
+    border-radius: $borders-radius;
+    height: inherit;
+    width: 74%;
+    padding-left: 15px;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+  }
+  &__button {
+    background-color: $button-color;
+    float: right;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    height: inherit;
+    border-radius: $borders-radius;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-family: inherit;
+    font-size: inherit;
+    width: 24%;
+    margin-left: 10px;
+
+    &:hover {
+      background-color: $button-color-hover;
+    }
+  }
+}
+
+.button__icon {
+  display: none;
+}
+
+.item-container {
+  margin-top: 20px;
+  background-color: none;
+}
+
+.item-list {
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    display: flex;
+    border-radius: $borders-radius;
+    margin: 5px 10px;
+    height: 50px;
+    padding-left: 15px;
+    background-color: #f0d9da;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #beabac;
+    }
+
+    &--checked {
+      text-decoration: line-through;
+      background-color: #7c686e;
+
+      &:hover {
+        background-color: #7c686e;
+      }
+    }
+
+    &__delete {
+      background-color: inherit;
+      border: none;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      color: $trash-color;
+      height: 50px;
+      width: 50px;
+      margin-left: auto;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $trash-color;
+        color: white;
+        border-radius: $borders-radius;
+        transition: background-color 0.3s ease-in-out;
+      }
+    }
+  }
+}
+
+::placeholder {
+  color: rgb(190, 151, 151);
+  opacity: 1;
+}
+
+.pending-container {
+  background-color: inherit;
+  height: 50px;
+  margin: 15px 10px 30px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  bottom: 0;
+  align-self: flex-end;
+
+  &__span {
+    padding-left: 0px;
+    font-family: inherit;
+  }
+  &__button {
+    background-color: $button-color;
+    float: right;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    height: 40px;
+    border-radius: $borders-radius;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-family: inherit;
+    width: 15%;
+    margin-left: auto;
+  }
+  &__button:hover {
+    background-color: $button-color-hover;
+  }
+}
+
+.dark-mode {
+  background-color: #500faa;
+  color: white;
+  &__body {
+    background-color: #331d2c;
+  }
+  &__button {
+    background-color: #331d2c;
+    color: #fff;
+    &:hover {
+      background-color: #22131d;
+    }
+  }
+  &__container {
+    background-color: #3f2e3e;
+    color: #fff;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    height: 100vh;
+    width: 100vw;
+  }
+  .add-container__input {
+    width: 75%;
+  }
+
+  .add-container__button {
+    width: 70px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 90vh;
+  }
+  .add-container__button {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>TODO with LocalStorage</title>
+
+    <link rel="icon" href="todoicon.ico" sizes="any" />
+    <link rel="stylesheet" href="scss/style.scss" />
+
+    <script
+      src="https://kit.fontawesome.com/79bb537e8d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="container__header">
+        <img
+          class="header__mode-icon--hidden"
+          src="icons/mode.png"
+          alt="mode icon"
+        />
+        <div>
+          <i class="fa-solid fa-list-check fa-sm"></i>
+          <span class="header__span">Tasks list</span>
+        </div>
+        <img class="header__mode-icon" src="icons/mode.png" alt="mode icon" />
+      </h1>
+      <div class="add-container">
+        <input
+          type="text"
+          placeholder="Add your new todo..."
+          class="add-container__input"
+        />
+        <button class="add-container__button"></button>
+      </div>
+      <div class="item-container">
+        <ul class="item-list"></ul>
+      </div>
+      <div class="pending-container">
+        <p class="pending-container__text">
+          <span class="pending-container__tasks"></span>
+        </p>
+        <button class="pending-container__button">Clear all</button>
+      </div>
+    </div>
+  </body>
+</html>
