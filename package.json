@@ -1,7 +1,11 @@
 {
   "name": "todo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple web application to save Your daily tasks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pzytek/todo_localstorage.git"
+  },
   "main": "script.js",
   "scripts": {
     "dev": "parcel src/index.html",
@@ -11,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5",
+    "parcel": "^2.9.3",
     "sass": "^1.66.1"
   }
 }
