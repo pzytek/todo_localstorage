@@ -1,0 +1,253 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+:before,
+:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: linear-gradient(to bottom left, #5b1ab6, #311b2a);
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 1.6rem;
+  display: flex;
+}
+
+.container {
+  background-color: #ecf2f9;
+  border-radius: 3px;
+  width: 90vw;
+  height: 90vh;
+  overflow: auto;
+}
+
+.container__header {
+  justify-content: space-between;
+  align-items: baseline;
+  display: flex;
+}
+
+.header__span {
+  margin-left: 10px;
+}
+
+.header__mode-icon {
+  margin: 0 20px 0 auto;
+  transition: transform 1s;
+  transform: rotate(45deg);
+}
+
+.header__mode-icon:hover {
+  transition: transform 1s;
+  transform: rotate(135deg);
+}
+
+.header__mode-icon--clicked {
+  filter: invert();
+  transition: transform 1s;
+  transform: rotate(225deg);
+}
+
+.header__mode-icon--hidden {
+  visibility: hidden;
+  margin-right: auto;
+}
+
+.add-container {
+  background-color: none;
+  border-radius: 3px;
+  height: 70px;
+  margin: 0 10px 30px;
+  position: sticky;
+  top: 0;
+}
+
+.add-container__input {
+  height: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  border: 1px #000;
+  border-radius: 3px;
+  outline: none;
+  width: 74%;
+  padding-left: 15px;
+}
+
+.add-container__button {
+  float: right;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  height: inherit;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: inherit;
+  background-color: #6200ea;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  width: 24%;
+  margin-left: 10px;
+  transition: all 0.3s;
+}
+
+.add-container__button:hover {
+  background-color: #5215a7;
+}
+
+.button__icon {
+  display: none;
+}
+
+.item-container {
+  background-color: none;
+  margin-top: 20px;
+}
+
+.item-list {
+  margin: 0;
+  padding: 0;
+}
+
+.item-list__item {
+  background-color: #f0d9da;
+  border-radius: 3px;
+  align-items: center;
+  height: 50px;
+  margin: 5px 10px;
+  padding-left: 15px;
+  display: flex;
+}
+
+.item-list__item:hover {
+  cursor: pointer;
+  background-color: #beabac;
+}
+
+.item-list__item--checked {
+  background-color: #7c686e;
+  text-decoration: line-through;
+}
+
+.item-list__item--checked:hover {
+  background-color: #7c686e;
+}
+
+.item-list__item__delete {
+  background-color: inherit;
+  color: #be3131;
+  border: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+}
+
+.item-list__item__delete:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #be3131;
+  border-radius: 3px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+::placeholder {
+  color: #be9797;
+  opacity: 1;
+}
+
+.pending-container {
+  background-color: inherit;
+  align-self: flex-end;
+  align-items: center;
+  height: 50px;
+  margin: 15px 10px 30px;
+  display: flex;
+  position: sticky;
+  bottom: 0;
+}
+
+.pending-container__span {
+  padding-left: 0;
+  font-family: inherit;
+}
+
+.pending-container__button {
+  float: right;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  background-color: #6200ea;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  width: 15%;
+  height: 40px;
+  margin-left: auto;
+  font-family: inherit;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.pending-container__button:hover {
+  background-color: #5215a7;
+}
+
+.dark-mode {
+  color: #fff;
+  background-color: #500faa;
+}
+
+.dark-mode__body {
+  background-color: #331d2c;
+}
+
+.dark-mode__button {
+  color: #fff;
+  background-color: #331d2c;
+}
+
+.dark-mode__button:hover {
+  background-color: #22131d;
+}
+
+.dark-mode__container {
+  color: #fff;
+  background-color: #3f2e3e;
+}
+
+@media (width <= 600px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .add-container__input {
+    width: 75%;
+  }
+
+  .add-container__button {
+    width: 70px;
+  }
+}
+
+@media (width >= 1200px) {
+  .container {
+    width: 90vh;
+  }
+
+  .add-container__button {
+    font-size: 20px;
+  }
+}

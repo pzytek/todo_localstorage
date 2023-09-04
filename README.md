@@ -2,14 +2,9 @@
 
 ToDo list is a simple web application to save Your daily tasks.
 
-### How to run
+### App
 
-To run the application locally, follow these steps:
-
-1. Clone the repository: git clone https://github.com/pzytek/todo_localstorage.git
-2. Navigate to the project directory: cd todo_localstorage
-3. Install dependencies: npm install
-4. Open project with command in terminal: npm run dev
+https://github.com/pzytek/todo_localstorage/src/index.html
 
 ### Features
 
@@ -28,6 +23,11 @@ To run the application locally, follow these steps:
 - CSS (SASS)
 - JavaScript
 
-### App
+### How to run
 
-https://github.com/pzytek/todo_localstorage
+To run the application locally, follow these steps:
+
+1. Clone the repository: git clone https://github.com/pzytek/todo_localstorage.git
+2. Navigate to the project directory: cd todo_localstorage
+3. Install dependencies: npm install
+4. Open project with command in terminal: npm run dev
