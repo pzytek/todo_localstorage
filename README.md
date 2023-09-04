@@ -4,7 +4,7 @@ ToDo list is a simple web application to save Your daily tasks.
 
 ### App
 
-https://github.com/pzytek/todo_localstorage/src/index.html
+https://pzytek.github.io/todo_localstorage/src/index.html
 
 ### Features
 
